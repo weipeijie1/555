@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var scores = [];
+    var score;
+    var sum = 0;
+    var maxScore = -Infinity;
+    var minScore = Infinity;
+do {
+    score = parseInt(prompt("请输入学生成绩（输入 0 结束输入）："));
+    
+    if (score !== 0) {
+        scores.push(score);
+        sum += score; 
+        if (score > maxScore) {
+            maxScore = score;
+        }
+        if (score < minScore) {
+            minScore = score;
+        }
+    }
+} while (score !== 0);
+if (scores.length > 0) {
+    var average = sum / scores.length;
+    alert("学生成绩统计：\n" +
+          "平均分: " + average.toFixed(2) + "\n" +
+          "最高分: " + maxScore + "\n" +
+          "最低分: " + minScore);
+} else {
+    alert("没有输入任何成绩。");
+}
+</script>
+</html>

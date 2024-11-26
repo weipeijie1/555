@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var guess;
+do {
+    guess = prompt("猜一个 1 到 100 之间的数字:");
+    guess = parseInt(guess);
+    if (guess > randomNumber) {
+        alert("猜的数字大了！");
+    } else if (guess < randomNumber) {
+        alert("猜的数字小了！");
+    } else if (guess === randomNumber) {
+        alert("恭喜你，猜对了！");
+    }
+} while (guess !== randomNumber);
+</script>
+</html>
